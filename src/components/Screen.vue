@@ -23,10 +23,11 @@ export default {
   width: 100vw;
   height: 100vh;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
 .screen > p {
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 7.5vw, 2.5rem);
   max-width: 30ch;
 }
 </style>

@@ -45,12 +45,12 @@ p {
 }
 
 .reaction {
-  font-size: 3.5rem;
+  font-size: clamp(1.75rem, 8vw, 3.5rem);
   color: aquamarine;
 }
 
 .category {
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 9vw, 5rem);
   margin: 3rem 0;
 }
 </style>

@@ -1,13 +1,16 @@
 <template>
-  <div class="prompt" @click="stopTimer" v-if="show">
+  <Screen background="#2dc000" color="white" class="prompt" @click="stopTimer" v-if="show">
     <h2>Clique agora!</h2>
-  </div>  
+  </Screen>
 </template>
 
 <script>
+import Screen from "./Screen.vue"
 export default {
   name: "ReactionPrompt",
   
+  components: { Screen },
+
   props: [
     "delay"
   ],
@@ -46,22 +49,11 @@ export default {
 
 <style scoped>
 .prompt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  background: rgb(45, 192, 0);
-
   z-index: 100;
 }
 
-.prompt h2 {
-  font-size: 3rem;
+h2 {
+  font-size: clamp(1.75rem, 8vw, 4rem);
+  text-align: center;
 }
 </style>
